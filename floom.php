@@ -40,7 +40,7 @@ font-family: sans-serif;">Floom | Same day Flower Delivery | Local Florists </h1
               <h1 style=" position: relative; font-weight: bolder;">Always unique, never generic</h1>
               <i style="width:600px; font-weight: bolder;">We only work with the most talented and unique artisans,
                  and were passionate about supporting our skilled family of florists.</i></article>
-               <object type="image/svg+xml" data="sun.php" style="opacity: 0.5; margin-left: 30; margin-top: 200; position: absolute; width:190px; height:180px;" >
+               <object type="image/svg+xml" data="sun.php" style="opacity: 0.5; margin-left: 30; margin-top: 200; position: absolute; width:150px; height:150px;" >
               <!-- Your fall back here -->
               <img src="sun.php" />
               </object> 
@@ -49,7 +49,7 @@ font-family: sans-serif;">Floom | Same day Flower Delivery | Local Florists </h1
                      <h1 style=" position: relative; font-weight: bolder;">Hand-delivered with care and attention</h1>
                       <i style="width:600px; font-weight: bolder;">Each of our orders is professionally arranged, wrapped and 
                         safely delivered with a hand-written card on the exact day that you need it.</i></article>
-                      <object type="image/svg+xml" data="hand.php" style="opacity: 0.5; margin-left: 10; margin-top: 380; position: absolute; width:190px; height:180px;" >
+                      <object type="image/svg+xml" data="hand.php" style="opacity: 0.5; margin-left: 10; margin-top: 380; position: absolute; width:150px; height:150px;" >
                       <!-- Your fall back here -->
                       <img src="hand.php" />
                       </object> 
