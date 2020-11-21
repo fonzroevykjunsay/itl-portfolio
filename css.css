@@ -1,0 +1,759 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #9064ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%235f21a5' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ffbabd' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%236527a6' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffb0b5' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%236b2da7' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ffa6ad' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%237033a8' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff9ca5' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237539a9' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ff929d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%237a3faa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ff8796' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-size: cover;
+  
+}
+
+
+.page {
+  --spacing: 0.5rem;
+  --bg-color-dark: rgba(0,0,0,0.1);
+  --bg-color-light: rgba(255,255,255,0.1);
+  
+  color: rgba(0,0,0,0.3);
+
+}
+
+.page-body,
+.navbar,
+.navbar-item,
+.sidebar,
+.sidebar-item,
+.logo,
+.logo-item,
+.logo-item-head,
+.logo-item-mouth,
+.columns,
+.column-item{
+  display: flex;
+  background-color: var(--bg-color-dark);
+  padding: var(--spacing);
+}
+
+
+
+.page-body {
+  min-height: calc(100vh - 10rem);
+}
+
+.navbar {
+  height: 3rem;
+  margin-bottom: var(--spacing);
+
+  align-items: center;
+  justify-content: left;
+  background-color: .5	#D8BFD8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23311b44' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237589d3'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+.navbar-item {
+  width: 10rem;
+  height: calc(100% - calc(var(--spacing) * 2));
+  align-items: center;
+  margin-right: calc(var(--spacing) * 2);
+  border-style: none;
+ border-color: none;
+ font-family: sans-serif;
+ font-weight: 900;
+ color:#3d0087;
+}
+
+.sidebar {
+  margin: 0 20px;
+  flex: 1;
+  padding: 0;
+  flex-direction: column;
+  margin-left: var(--spacing);
+  background: transparent;
+  transition: 0.5s;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-color: .5	#D8BFD8;
+}
+
+.sidebar-item {
+  flex: 1;
+  align-items: center;
+  border-style: none;
+  border-color: none;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 900;
+  color:#3d0087;
+  background-color: .5	#D8BFD8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23311b44' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237589d3'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.sidebar-item:nth-child(1):before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../css/images/hoverbg.png');
+  background-size:  85% 100%;                    
+  background-position: right center;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1; 
+  background-color: .5	#D8BFD8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23311b44' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237589d3'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sidebar-item:nth-child(2):before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../css/images/background.jpg');
+  background-size:  80% 100%;                    
+  background-position: right center;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1; 
+}
+.sidebar-item:nth-child(3):before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../css/images/k.png');
+  background-size:  80% 100%;                    
+  background-position: right center;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1; 
+}
+.sidebar-item:nth-child(4):before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../css/images/images.png');
+  background-size:  80% 100%;                    
+  background-position: right center;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1; 
+}
+.sidebar-item:nth-child(5):before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url('../css/images/yah.jpg');
+  background-size:  80% 100%;                    
+  background-position: right center;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1; 
+}
+
+
+.sidebar-item:nth-child(even) {
+  background-color: var(--bg-color-light);
+}
+
+.columns {
+  flex: 4;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.column-item {
+  width: calc(100% - calc(var(--spacing) * 4));
+  margin: var(--spacing);
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  color:#FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  background-color: .5	#D8BFD8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23311b44' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237589d3'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.column-item:last-child {
+  margin-left: auto;
+  background-color: .5	#D8BFD8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23311b44' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237589d3'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.flower {
+width  : 300px;
+height : 300px;
+margin-top: -120;
+margin-left: 400;
+opacity: .3;
+position: absolute;
+
+}
+.flower svg {
+width  : 650px;
+height : 650px;
+}
+#Dot {
+fill: #9370DB;
+}
+#petalsA,
+#petalsB,
+#petalsC,
+#petalsD {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower1 {
+width  : 300px;
+height : 300px;
+margin-top: -50;
+margin-left: 1000;
+opacity: .3;
+position: absolute;
+
+}
+.flower1 svg {
+width  : 300px;
+height : 300px;
+}
+#Doted {
+fill:#9370DB ;
+}
+#petalsA1,
+#petalsB1,
+#petalsC1,
+#petalsD1 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA1 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB1 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC1 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD1 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower2 {
+width  : 300px;
+height : 300px;
+margin-top: -200;
+margin-left: -400;
+opacity: .3;
+position: absolute;
+
+}
+.flower2 svg {
+width  : 800px;
+height : 800px;
+}
+#Doteds {
+fill: #9370DB;
+}
+#petalsA2,
+#petalsB2,
+#petalsC2,
+#petalsD2 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA2 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB2 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC2 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD2 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower3 {
+width  : 300px;
+height : 300px;
+margin-top: 200;
+margin-left: 820;
+opacity: .3;
+position: absolute;
+
+}
+.flower3 svg {
+width  : 300px;
+height : 300px;
+}
+#Dotedsb {
+fill: #9370DB;
+}
+#petalsA2,
+#petalsB2,
+#petalsC2,
+#petalsD2 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA3 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB3 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC3 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD3 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower4 {
+width  : 300px;
+height : 300px;
+margin-top: 130;
+margin-left: 950;
+opacity: .3;
+position: absolute;
+
+}
+.flower4 svg {
+width  : 500px;
+height : 500px;
+}
+#Dotedsba {
+fill: #9370DB;
+}
+#petalsA4,
+#petalsB4,
+#petalsC4,
+#petalsD4 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA4 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB4 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC4 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD4 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower5 {
+width  : 300px;
+height : 300px;
+margin-top: 130;
+margin-left: 200;
+opacity: .3;
+position: absolute;
+
+}
+.flower5 svg {
+width  : 200px;
+height : 200px;
+}
+#Dotedsbad {
+fill: #9370DB;
+}
+#petalsA5,
+#petalsB5,
+#petalsC5,
+#petalsD5 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA5 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB5 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC5 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD5 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower6 {
+width  : 300px;
+height : 300px;
+margin-top: 200;
+margin-left: 300;
+opacity: .3;
+position: absolute;
+
+}
+.flower6 svg {
+width  : 400px;
+height : 400px;
+}
+#Dotedsbade {
+fill: #9370DB;
+}
+#petalsA6,
+#petalsB6,
+#petalsC6,
+#petalsD6 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA6 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB6 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC6 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD6 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower7 {
+width  : 300px;
+height : 300px;
+margin-top: 10;
+margin-left: 300;
+opacity: .3;
+position: absolute;
+
+}
+.flower7 svg {
+width  : 300px;
+height : 300px;
+}
+#Dotedsbadef {
+fill: #9370DB;
+}
+#petalsA7,
+#petalsB7,
+#petalsC7,
+#petalsD7 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA7 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB7 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC7 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD7 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+.flower8 {
+width  : 300px;
+height : 300px;
+margin-top: 250;
+margin-left: 50;
+opacity: .3;
+position: absolute;
+
+}
+.flower8 svg {
+width  : 400px;
+height : 400px;
+}
+#Dotedsbadefg {
+fill: #9370DB;
+}
+#petals87,
+#petalsB8,
+#petalsC8,
+#petalsD8 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA8 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB8 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC8 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD8 {
+  animation :
+    grow 2s linear forwards,
+    spin 12s linear infinite 3.5s,
+    colorize 30s linear infinite 4s
+  ;
+
+}
+.flower9 {
+  width  : 300px;
+  height : 300px;
+  margin-top: -50;
+  margin-left: 900;
+  opacity: .3;
+  position: absolute;
+}
+.flower9 svg {
+width  : 200px;
+height : 200px;
+
+}
+#Dotedsbadefgh {
+fill: #9370DB;
+}
+#petalsA9,
+#petalsB9,
+#petalsC9,
+#petalsD9 {
+transform        : scale( .35 );
+transform-box    : fill-box;
+transform-origin : center;
+}
+#petalsA9 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsB9 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 2.5s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsC9 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3s,
+  colorize 30s linear infinite 4s
+;
+}
+#petalsD9 {
+animation :
+  grow 2s linear forwards,
+  spin 12s linear infinite 3.5s,
+  colorize 30s linear infinite 4s
+;
+}
+
+@keyframes grow {
+from {
+  transform        : scale( 0.35 );
+  transform-box    : fill-box;
+  transform-origin : center;
+}
+to {
+  transform        : scale( 1 );
+  transform-box    : fill-box;
+  transform-origin : center;
+}
+}
+@keyframes spin {
+from {
+  transform        : rotate( 0deg );
+  transform-box    : fill-box;
+  transform-origin : center;
+}
+to {
+  transform        : rotate( 360deg );
+  transform-box    : fill-box;
+  transform-origin : center;
+}
+}
+@keyframes colorize {
+0%   { fill: white; }
+10%  { fill:#E6E6FA; }
+20%  { fill: white; }
+30%  { fill:#D8BFD8; }
+40%  { fill: white; }
+50%  { fill: 	#DDA0DD; }
+60%  { fill: white; }
+70%  { fill: #EE82EE; }
+80%  { fill: white; }
+90%  { fill:#DA70D6; }
+100% { fill: white; }
+}
+@import 'https://fonts.googleapis.com/css?family=Shrikhand';
