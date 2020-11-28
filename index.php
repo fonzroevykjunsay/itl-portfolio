@@ -1,7 +1,7 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway&display=swap" rel="stylesheet">
-<link href="css/style1.css" rel="stylesheet"type="text/css">
+<link href="css/style.css" rel="stylesheet"type="text/css">
 <meta charset="utf-8>
 <title>"Junsay"</title>
 </head>
@@ -25,7 +25,7 @@
     <ul>
       <li>CANVAS
             <ul>
-            
+            <li><a href= "canvas.php">Learning Task 7.1 </a></li>
             </ul></li>
 </ul>
   </div>
